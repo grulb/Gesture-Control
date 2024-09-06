@@ -33,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -44,4 +47,14 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    val cameraxVersion = "1.3.0"
+    // CameraX core library
+    implementation ("androidx.camera:camera-core:$cameraxVersion")
+    implementation ("androidx.camera:camera-camera2:$cameraxVersion")
+    // CameraX Lifecycle library
+    implementation ("androidx.camera:camera-lifecycle:$cameraxVersion")
+    // CameraX View class
+    implementation ("androidx.camera:camera-view:$cameraxVersion")
+    // CameraX Extensions library (опционально, для дополнительных эффектов)
+    implementation ("androidx.camera:camera-extensions:$cameraxVersion")
 }
